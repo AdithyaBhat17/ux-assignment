@@ -1,56 +1,33 @@
-import {
-  Link as ChakraLink,
-  Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+import Brands from "../components/Layout/Brands";
+import Categories from "../components/Categories";
+import Contact from "../components/Layout/Contact";
+import Hero from "../components/Layout/Hero";
+import { getCategories } from "../lib/getCategories";
+import { PostgrestError } from "../types/api";
 
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
+interface IndexProps {
+  data: any[];
+  error: PostgrestError | null;
+}
 
-const Index = () => (
-  <Container height="100vh">
+const Index = ({ data, error }: IndexProps) => (
+  <div>
     <Hero />
-    <Main>
-      <Text>
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>typescript</Code>.
-      </Text>
+    <Categories data={data} />
+    <Brands />
+    <Contact />
+  </div>
+);
 
-      <List spacing={3} my={0}>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
-    </Main>
+export async function getStaticProps() {
+  const response = await getCategories();
 
-    <DarkModeSwitch />
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
-    <CTA />
-  </Container>
-)
+  return {
+    props: {
+      data: response.data,
+      error: response.error,
+    },
+  };
+}
 
-export default Index
+export default Index;
