@@ -16,7 +16,15 @@ Visit [https://softway-ux.adithyabhat.com](https://softway-ux.adithyabhat.com) t
 
 Create a DB on [https://supabase.io](https://supabase.io) with the following schema - 
 
-![db schema](https://user-images.githubusercontent.com/20818481/120028493-63214080-c012-11eb-997e-0b27850130da.png)
+![db schema](https://user-images.githubusercontent.com/20818481/120028493-63214080-c012-11eb-997e-0b27850130da.png). 
+
+Populate the DB tables with the following data:  
+
+![image](https://user-images.githubusercontent.com/20818481/120029207-636e0b80-c013-11eb-8669-811a3f73e07a.png)  
+
+![image](https://user-images.githubusercontent.com/20818481/120029283-81d40700-c013-11eb-80e7-f69363352b29.png)  
+
+![image](https://user-images.githubusercontent.com/20818481/120029429-b5af2c80-c013-11eb-85ef-9bad63cab09c.png)  
 
 
 Copy the contents of `.env.local.example` to `.env.local` and fill the values for the environment variables from your supabase account.
