@@ -5,7 +5,7 @@ import Inventory from "../../components/Inventory";
 import { capitalizeString } from "../../utils/stringUtilities";
 import { Heading } from "@chakra-ui/layout";
 
-function AdminPage({ types }: { types: string }) {
+function AdminPage() {
   const { query } = useRouter();
 
   return (
@@ -23,7 +23,6 @@ export async function getStaticProps({ params }: { params: { name: string } }) {
 
   return {
     props: {
-      types: response.data.map((c) => c.name) ?? null,
       error: response.error,
     },
   };

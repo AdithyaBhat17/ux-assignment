@@ -1,13 +1,4 @@
-import { Image } from "@chakra-ui/image";
-import {
-  Box,
-  Grid,
-  GridItem,
-  Heading,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@chakra-ui/layout";
+import { Grid, GridItem, Heading, Stack } from "@chakra-ui/layout";
 
 const BRANDS = [
   {
