@@ -56,7 +56,10 @@ function Products({ id }: { id: number }) {
         justifyContent="center"
         height="60vh"
       >
-        <FlowerSpinner style={{ display: "block" }} color="#257F78" />
+        <FlowerSpinner
+          style={{ display: "block", width: "auto" }}
+          color="#257F78"
+        />
       </Flex>
     );
 
