@@ -15,7 +15,7 @@ export interface Category {
 export default function Categories({ data }: Category) {
   // TODO: Add micro-animations
   return (
-    <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} gridGap="10">
+    <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} gridGap="20">
       {data.map((category) => (
         <Link
           key={category.id}

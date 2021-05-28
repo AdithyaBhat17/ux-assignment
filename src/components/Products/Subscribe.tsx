@@ -93,6 +93,7 @@ function Subscribe({
               <Input
                 onChange={phoneHandler}
                 pl="4rem"
+                autoFocus
                 value={phone ?? ""}
                 type="tel"
                 placeHolder="713-123-1429"

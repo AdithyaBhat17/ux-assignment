@@ -8,14 +8,10 @@ import Card from "./Card";
 import { FlowerSpinner } from "react-epic-spinners";
 
 function Inventory({ type = "out of stock" }: { type: string }) {
-  const [status, setStatus] = useState("idle");
   const [products, setProducts] = useState<ProductInventory[] | null>(null);
 
   useEffect(() => {
-    setStatus("loading");
-    getProductInventory(type)
-      .then(setProducts)
-      .then(() => setStatus("idle"));
+    getProductInventory(type).then(setProducts);
   }, []);
 
   const optimisticProductUpdateHandler = (id: number, remaining: number) => {
@@ -34,7 +30,7 @@ function Inventory({ type = "out of stock" }: { type: string }) {
     ]);
   };
 
-  if ((!products || !products.length) && status !== "loading")
+  if (products && !products.length)
     return (
       <Box my="10">
         <CheckCircleIcon
