@@ -56,8 +56,13 @@ function Inventory({ type = "out of stock" }: { type: string }) {
         alignItems="center"
         justifyContent="center"
         height="60vh"
+        mx="auto"
+        width="100%"
       >
-        <FlowerSpinner style={{ display: "block" }} color="#257F78" />
+        <FlowerSpinner
+          style={{ display: "block", width: "auto" }}
+          color="#257F78"
+        />
       </Flex>
     );
 
@@ -74,7 +79,7 @@ function Inventory({ type = "out of stock" }: { type: string }) {
         ))}
       <Button
         position="fixed"
-        bottom="5"
+        bottom="8"
         width="4rem"
         height="4rem"
         bg="celadonGreen"
@@ -82,7 +87,7 @@ function Inventory({ type = "out of stock" }: { type: string }) {
         borderRadius="full"
         boxShadow="lg"
         _hover={{ bg: "deepJungleGreen" }}
-        right="5"
+        right="8"
         as={Link}
         aria-label="new product"
         href="/admin/new"

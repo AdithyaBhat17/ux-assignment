@@ -1,4 +1,4 @@
-import { Grid, GridItem, Heading } from "@chakra-ui/layout";
+import { Flex, Grid, GridItem, Heading } from "@chakra-ui/layout";
 import { useProducts } from "../../hooks/products";
 import EmptyState from "./EmptyState";
 import Card from "./Card";
@@ -8,12 +8,12 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/modal";
 import Subscribe from "./Subscribe";
 import { validatePhone } from "../../lib/validatePhone";
 import { createSubscription } from "../../lib/createSubscription";
+import { FlowerSpinner } from "react-epic-spinners";
 
 function Products({ id }: { id: number }) {
   const { products, isLoading } = useProducts(id);
@@ -48,7 +48,17 @@ function Products({ id }: { id: number }) {
     return <EmptyState />;
   }
 
-  if (!products) return <div>Loading...</div>;
+  if (!products)
+    return (
+      <Flex
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        height="60vh"
+      >
+        <FlowerSpinner style={{ display: "block" }} color="#257F78" />
+      </Flex>
+    );
 
   return (
     <div>
@@ -64,7 +74,6 @@ function Products({ id }: { id: number }) {
             </Heading>
             {products[productClass].map((product) => (
               <Card
-                editMode={editMode}
                 setEditMode={setEditMode}
                 key={product.id}
                 product={product}
