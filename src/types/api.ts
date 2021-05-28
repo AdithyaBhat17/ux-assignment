@@ -4,3 +4,11 @@ export type PostgrestError = {
   hint: string;
   code: string;
 };
+
+export interface ProductsResponse {
+  id: number;
+  name: string;
+  categoryId: number;
+  remaining: number;
+  class: string;
+}
