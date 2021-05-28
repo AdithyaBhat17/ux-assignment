@@ -1,33 +1,49 @@
-# Example app with [chakra-ui](https://github.com/chakra-ui/chakra-ui) and Typescript
+### Quality Feed & Gardening Company
 
-This example features how to use [chakra-ui](https://github.com/chakra-ui/chakra-ui) as the component library within a Next.js app with typescript.
+Please go through the UX Case study at [https://www.notion.so/adithyanr/Case-Study-9e60d782c8174e9e8e145ada8c3bb442](https://www.notion.so/adithyanr/Case-Study-9e60d782c8174e9e8e145ada8c3bb442) before checking this source code.
 
-Next.js and chakra-ui have built-in TypeScript declarations, so we'll get autocompletion for their modules straight away.
+This repository contains the source code for Quality Feed & Gardening company's website (mock). 
 
-We are connecting the Next.js `_app.js` with `chakra-ui`'s Provider and theme so the pages can have app-wide dark/light mode. We are also creating some components which shows the usage of `chakra-ui`'s style props.
+Visit [https://softway-ux.adithyabhat.com](https://softway-ux.adithyabhat.com) to test the site live. You can access the admin portal using [https://softway-ux.adithyabhat.com/admin](https://softway-ux.adithyabhat.com/admin). 
 
-## Deploy your own
+## Pre-requisites
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+1. Node.js runtime (>14.x)
+2. A Node Package Manager (Yarn, NPM or PNPM)
+3. A Terminal.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-chakra-ui-typescript&project-name=with-chakra-ui-typescript&repository-name=with-chakra-ui-typescript)
+## Setup Guide
 
-## How to use
+Create a DB on [https://supabase.io](https://supabase.io) with the following schema - 
 
-### Using `create-next-app`
+![db schema](https://user-images.githubusercontent.com/20818481/120028493-63214080-c012-11eb-997e-0b27850130da.png)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+
+Copy the contents of `.env.local.example` to `.env.local` and fill the values for the environment variables from your supabase account.
+
+Then, run the following commands.
 
 ```bash
-npx create-next-app --example with-chakra-ui-typescript with-chakra-ui-typescript-app
-# or
-yarn create next-app --example with-chakra-ui-typescript with-chakra-ui-typescript-app
+git clone https://github.com/adithyabhat17/ux-assignment
+cd ux-assignment
+code . #open VS Code
+yarn install && yarn dev #Install dependencies and start the server.
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Libraries used
 
-## Notes
+- [Next.js (A React Framework)](https://nextjs.org)
+- [TypeScript](http://typescriptlang.org)
+- [Chakra UI](http://chakra-ui.com)
+- [Supabase SDK](https://supabase.io)
 
-Chakra has supported Gradients and RTL in `v1.1`. To utilize RTL, [add RTL direction and swap](https://chakra-ui.com/docs/features/rtl-support).
+### Future Enhancements
 
-If you don't have multi-direction app, you should make `<Html lang="ar" dir="rtl">` inside `_document.ts`.
+- [ ]  Authentication & Authorization for admins.
+- [ ]  Better Sitemap
+- [ ]  Better marketing page
+- [ ]  Way for users to request new products
+- [ ]  Reminders to stock up on products with very less count.
+- [ ]  Search functionality to access products quickly.
+- [ ]  A/B test with emails.
+- [ ]  Facebook Messenger Chatbot.
