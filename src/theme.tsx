@@ -27,6 +27,10 @@ const globalStyles: GlobalStyles = {
     "html/body": {
       boxSizing: "border-box",
     },
+    body: {
+      width: "100vw",
+      overflowX: "hidden",
+    },
     a: {
       color: colors.celadonGreen,
     },

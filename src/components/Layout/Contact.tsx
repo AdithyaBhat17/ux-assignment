@@ -19,9 +19,10 @@ function Contact() {
         columns={{ base: 1, md: 2 }}
       >
         <GridItem>
-          <Stack spacing="16">
+          <Stack as="section" spacing="16">
             <Heading>Reach us at</Heading>
             <iframe
+              title="Waze Map"
               src="https://embed.waze.com/iframe?zoom=16&lat=29.795914&lon=-95.379686&ct=livemap&pin=1"
               // width="600"
               height="450"

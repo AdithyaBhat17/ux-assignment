@@ -3,20 +3,20 @@ import Categories from "../components/Categories";
 import Contact from "../components/Layout/Contact";
 import Hero from "../components/Layout/Hero";
 import { getCategories } from "../lib/getCategories";
-import { PostgrestError } from "../types/api";
+import { PostgrestError } from "../types";
 
 interface IndexProps {
   data: any[];
   error: PostgrestError | null;
 }
 
-const Index = ({ data, error }: IndexProps) => (
-  <div>
+const Index = ({ data }: IndexProps) => (
+  <main>
     <Hero />
     <Categories data={data} />
     <Brands />
     <Contact />
-  </div>
+  </main>
 );
 
 export async function getStaticProps() {

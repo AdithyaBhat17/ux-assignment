@@ -3,15 +3,14 @@ import { Text } from "@chakra-ui/layout";
 import { Box } from "@chakra-ui/layout";
 import { Flex } from "@chakra-ui/layout";
 import { memo, SetStateAction } from "react";
-import { ProductsResponse } from "../../types/api";
+import { ProductsResponse } from "../../types";
 
 interface ProductProps {
   product: ProductsResponse;
-  editMode: number | null;
   setEditMode: React.Dispatch<SetStateAction<number | null>>;
 }
 
-function Card({ product, editMode, setEditMode }: ProductProps) {
+function Card({ product, setEditMode }: ProductProps) {
   return (
     <Flex
       justifyContent="space-between"
