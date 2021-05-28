@@ -34,7 +34,7 @@ function Inventory({ type = "out of stock" }: { type: string }) {
     ]);
   };
 
-  if ((!products || !products.length) && status !== "loading")
+  if (products && !products.length)
     return (
       <Box my="10">
         <CheckCircleIcon
