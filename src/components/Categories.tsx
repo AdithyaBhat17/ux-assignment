@@ -1,13 +1,4 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Link,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@chakra-ui/layout";
+import { Heading, Link, SimpleGrid, Stack, Text } from "@chakra-ui/layout";
 
 // TODO: Move this interface to /types
 export interface Category {

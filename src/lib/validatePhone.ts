@@ -1,4 +1,4 @@
-import { ChangeEvent, KeyboardEvent } from "react";
+import { ChangeEvent } from "react";
 
 export function validatePhone(phone: string) {
   if (phone.trim().length !== 16) return false;
@@ -33,7 +33,7 @@ export const formatToPhone = (event: ChangeEvent<HTMLInputElement>) => {
   }
 
   const target = event.target;
-  const input = event.target.value.replace(/\D/g, "").substring(0, 10); // First ten digits of input only
+  const input = event.target.value.replace(/\D/g, "").substring(0, 10); // First ten digits of input are considered.
   const zip = input.substring(0, 3);
   const middle = input.substring(3, 6);
   const last = input.substring(6, 10);

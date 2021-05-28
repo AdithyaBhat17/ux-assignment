@@ -7,9 +7,9 @@ import { getCategories } from "../../lib/getCategories";
 
 function CategoryPage({ data }: { data: Category["data"][number] }) {
   return (
-    <Box px={{ base: "0", sm: "20", md: "40", lg: "80", xl: "96" }}>
+    <Box as="main" px={{ base: "0", sm: "20", md: "40", lg: "80", xl: "96" }}>
       <Stack mt="10" spacing="10">
-        <Heading>{data.name}</Heading>
+        <Heading as="h1">{data.name}</Heading>
         <Image
           width="100%"
           height="auto"
@@ -18,7 +18,7 @@ function CategoryPage({ data }: { data: Category["data"][number] }) {
         />
         <Text>{data.description || data.excerpt}</Text>
       </Stack>
-      <Stack>
+      <Stack as="section">
         <Products id={data.id} />
       </Stack>
       <Contact />

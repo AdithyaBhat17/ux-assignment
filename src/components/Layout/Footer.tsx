@@ -7,11 +7,11 @@ import {
   ListItem,
   Spacer,
 } from "@chakra-ui/layout";
-import { navRoutes } from "../utils/routes";
+import { footerRoutes, navRoutes } from "../../utils/routes";
 
 export default function Footer({ links }: { links: typeof navRoutes }) {
   return (
-    <Box width="100%" mt="20" p="10" as="footer" bg="celadonGreen">
+    <Box mt="20" p="10" as="footer" bg="celadonGreen">
       <Flex alignItems="center">
         <img src="/static/assets/images/Logo.png" alt="Logo" />
         <Heading ml="5" size="md" color="white">
@@ -27,7 +27,7 @@ export default function Footer({ links }: { links: typeof navRoutes }) {
           justifyContent="flex-start"
           gridGap="10"
         >
-          {links.map((link) => (
+          {[...links, ...footerRoutes].map((link) => (
             <ListItem key={link.name}>
               <Link href={link.path} color="white">
                 {link.name}

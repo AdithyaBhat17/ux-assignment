@@ -17,6 +17,7 @@
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-epic-spinners": "^0.5.0",
     "swr": "^0.5.6"
   },
   "devDependencies": {

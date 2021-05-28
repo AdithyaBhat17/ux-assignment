@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../lib/getProducts";
-import { ProductsResponse } from "../types/api";
+import { ProductsResponse } from "../types";
 
 export function useProducts(categoryId: number) {
   const [status, setStatus] =

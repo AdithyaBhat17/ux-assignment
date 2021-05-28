@@ -11,6 +11,7 @@ export const Container = (props: FlexProps) => {
       p={{ base: "5", sm: "10" }}
       direction="column"
       // alignItems="center"
+      w="100vw"
       bg={bgColor[colorMode]}
       color={color[colorMode]}
       {...props}
