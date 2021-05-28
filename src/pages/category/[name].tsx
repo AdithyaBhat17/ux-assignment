@@ -1,6 +1,7 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, Stack, Text } from "@chakra-ui/layout";
 import { Category } from "../../components/Categories";
+import Contact from "../../components/Layout/Contact";
 import Products from "../../components/Products";
 import { getCategories } from "../../lib/getCategories";
 
@@ -20,6 +21,7 @@ function CategoryPage({ data }: { data: Category["data"][number] }) {
       <Stack>
         <Products id={data.id} />
       </Stack>
+      <Contact />
     </Box>
   );
 }
