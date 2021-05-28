@@ -1,6 +1,6 @@
 ### Quality Feed & Gardening Company
 
-Please go through the UX Case study at [https://www.notion.so/adithyanr/Case-Study-9e60d782c8174e9e8e145ada8c3bb442](https://www.notion.so/adithyanr/Case-Study-9e60d782c8174e9e8e145ada8c3bb442) before checking this source code.
+> Please go through the UX Case study at [https://www.notion.so/adithyanr/Case-Study-9e60d782c8174e9e8e145ada8c3bb442](https://www.notion.so/adithyanr/Case-Study-9e60d782c8174e9e8e145ada8c3bb442) before checking this source code.
 
 This repository contains the source code for Quality Feed & Gardening company's website (mock). 
 
@@ -47,3 +47,4 @@ yarn install && yarn dev #Install dependencies and start the server.
 - [ ]  Search functionality to access products quickly.
 - [ ]  A/B test with emails.
 - [ ]  Facebook Messenger Chatbot.
+- [ ]  Use BlurHash algorithm to lazy load images.
